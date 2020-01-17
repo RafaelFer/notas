@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import ptBR from 'antd/es/locale/pt_BR';
+import Home from './components/Home'
+import { ConfigProvider } from 'antd';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <ConfigProvider locale={ptBR}>
+       <Home></Home>
+     </ConfigProvider>
     </div>
   );
 }
